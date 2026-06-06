@@ -1,4 +1,6 @@
-from datasets.EDA import store_df, test_df,train_df
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from datasets.EDA import store_df, test_df, train_df
 import pandas as pd
 from feature_eng import store_stats, copy_df
 

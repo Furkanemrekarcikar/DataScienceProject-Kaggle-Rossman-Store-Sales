@@ -15,22 +15,23 @@ The project uses the [Rossmann Store Sales](https://www.kaggle.com/competitions/
 ## Project Structure
 
 ```
-internProject2/
+DataScienceProject/
 ├── datasets/
 │   ├── EDA.py              # Exploratory data analysis and data merging
 │   ├── train.csv
 │   ├── test.csv
 │   └── store.csv
-├── store_analysis.py       # Store-level EDA (correlation, distributions)
-├── feature_eng.py          # Feature engineering on merged dataset
-├── feature_eng_old_df.py   # Feature engineering on raw dataset (baseline)
-├── test_df.py              # Test set preparation
-├── linear_reg.py           # Linear Regression model
-├── knn_model.py            # K-Nearest Neighbors model
-├── svr_model.py            # Support Vector Regression model
-├── cart.py                 # Decision Tree (CART) model
-├── random_forest.py        # Random Forest model with GridSearchCV
-└── xgboost.py              # XGBoost model with GridSearchCV + SHAP
+├── ml_models/
+│   ├── store_analysis.py       # Store-level EDA (correlation, distributions)
+│   ├── feature_eng.py          # Feature engineering on merged dataset
+│   ├── feature_eng_old_df.py   # Feature engineering on raw dataset (baseline)
+│   ├── test_df.py              # Test set preparation
+│   ├── linear_reg.py           # Linear Regression model
+│   ├── knn_model.py            # K-Nearest Neighbors model
+│   ├── svr_model.py            # Support Vector Regression model
+│   ├── cart.py                 # Decision Tree (CART) model
+│   ├── random_forest.py        # Random Forest model with GridSearchCV
+│   └── xgboost.py              # XGBoost model with GridSearchCV + SHAP
 ```
 
 ## Pipeline
@@ -83,8 +84,8 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
 Run scripts from the project root in order:
 
 ```bash
-python datasets/EDA.py        # loads and preprocesses data
-python store_analysis.py      # store-level visualizations
-python feature_eng.py         # builds engineered feature set
-python xgboost.py             # train best model + SHAP analysis
+python datasets/EDA.py              # loads and preprocesses data
+python ml_models/store_analysis.py  # store-level visualizations
+python ml_models/feature_eng.py     # builds engineered feature set
+python ml_models/xgboost.py         # train best model + SHAP analysis
 ```
